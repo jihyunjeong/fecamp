@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joinform_sample_table</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+    <style type="text/css">
+        td {
+            height:30px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="a.html" method="post">
+        <fieldset>
+            <legend>필수 입력 정보</legend>
+            <table>
+                <tr>
+                    <td><label for="email1">E-MAIL </label></td>
+                    <td><input type="email" name="email" size="30" id="email1" placeholder="E-mail 입력"></td>
+                </tr>
+                <tr>
+                    <td><label for="pw1">비밀번호 입력</label></td>
+                    <td><input type="password" name="password1" size="30" id="pw1" placeholder="비밀번호 입력"></td>
+                </tr>
+                <tr>
+                    <td><label for="pw2">비밀번호 확인</label></td>
+                    <td><input type="password" name="password2" size="30" id="pw2" placeholder="비밀번호 재입력"></td>
+                </tr>
+            
+            </table>
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend>선택 입력 정보</legend>
+            <table>
+                <tr>
+                    <td><label for="phone">전화번호 입력</label></td>
+                    <td><select name="phone1">
+                        <option value="010">010</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="070">070</option>
+                        </select>
+                        - <input type="tel" name="phone2" id="phone" maxlength="4" size="6">
+                        - <input type="tel" name="phone3" maxlength="4" size="6"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="birth">생년월일 입력</label></td>
+                    <td><input type="date" name="birthday" id="birth"></td>        
+                </tr>         
+            </table>
+        </fieldset>
+    
+        <br>
+        
+        <button type="submit" name="submit">가입</button>
+        <button type="reset" name="reset">취소</button>
+    </form>
+</body>
+</html>
