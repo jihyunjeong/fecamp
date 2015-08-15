@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> TEST </title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+    
+<!-- Fast Campus 150812 -->
+<!--  link -->
+    <a href="http://naver.com" target="_blank">링크</a>
+
+<!--  link with image -->
+    <a href="http://naver.com" target="_blank"><img src="http://img.naver.net/static/newsstand/up/2014/0715/029.gif" width="100" height="100" alt="link"></a>
+
+<!-- Paragraph Element -->
+    <p>화면에 보이는 영역입니다.</p>
+    <p>화면에 보이는 영역입니다.<br>화면에 보이는 영역입니다.</p>
+    <hr>
+    <p>화면에 보이는 영역입니다. </p>
+    
+<!-- Heading elements -->
+    <h1> h1 프론트엔트 프로그래밍 캠프 </h1>
+    <h2> h2 프론트엔트 프로그래밍 캠프 </h2>
+    <h3> h3 프론트엔트 프로그래밍 캠프 </h3>
+    <h4> h4 프론트엔트 프로그래밍 캠프 </h4>
+    <h5> h5 프론트엔트 프로그래밍 캠프 </h5>
+    <h6> h6 프론트엔트 프로그래밍 캠프 </h6>
+    
+    <hr>
+    <h1> 네이버 뉴스 </h1>
+    <h6 style="font-size:2em">네이버 뉴스</h6>
+    <p style="font-weight:bold;font-size:30px">네이버 뉴스</p>
+    
+
+<!-- Unorder/order list -->
+    <ul>
+        <li> 첫번째 목록입니다.</li>
+        <li> 두번째 목록입니다.</li>
+        <li> 세번째 목록입니다.</li>
+    </ul>
+    <ol>
+        <li> 첫번째 목록입니다.</li>
+        <li> 두번째 목록입니다.
+            <ul>
+                <li>세부 첫번째 입니다.</li>
+                <li>세부 두번째 입니다.</li>
+            </ul></li>
+        <li> 세번째 &nbsp; 목록입니다.</li>
+    </ol>
+    <ol reversed>
+        <li> 첫번째 목록입니다.</li>
+        <li> 두번째 목록입니다.</li>
+        <li> 세번째 목록입니다.</li>
+    </ol>
+    
+<!-- Description List Element -->
+    <dl>
+        <dt>Firefox</dt>
+        <dd>a kind of web browser</dd>
+        <dd>A free, open source, cross-platform</dd>
+        <dt>internet explore</dt>
+        <dd> web brower of micro soft</dd>
+    </dl>
+    
+<!-- Table Element -->
+    <table border="1" cellspacing="3" cellpadding="2">
+        <caption>시간표</caption>
+        <tr>
+            <th></th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+        </tr>
+        <tr>
+            <th>1st</th>
+            <td rowspan="2">A1</td>
+            <td>B1</td>
+            <td>C1</td>
+            <td>D1</td>
+            <td>E1</td>
+        </tr>
+        <tr>
+            <th>2nd</th>
+            <td colspan="3">A2</td>
+            <td>B2</td>
+        </tr> 
+        <tr>
+            <th>3rd</th>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+            <td>D3</td>
+            <td>E3</td>
+        </tr>
+    </table>
+    
+<!-- Table Element 2 -->
+    <table border="2" cellpadding="1" cellspacing="1">
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>금액</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>총합</th>
+                <th>5000</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>숙박비</th>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <th>교통비</th>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <th>식사비</th>
+                <td>1000</td>
+            </tr>
+        </tbody>
+    </table>
+    
+<!-- form -->
+    <form action="" method="post">
+        <p>이름을 입력하세요.</p>
+        <p><input type="text" name="username" value="johnnie" readonly></p>
+        <p><input type="submit" value="보내기"></p>
+    </form>
+    
+    <br><br>
+    
+    <form action="" method="post">
+        <p>text<input type="text" name="text" size="10"></p>
+        <p>search<input type="search" name="search" maxlength="3"></p>
+        <p>password<input type="password" name="password"></p>
+        <p>radio
+            <input type="radio" name="radio">
+            <input type="radio" name="radio">
+            <input type="radio" name="radio">
+            <input type="radio" name="radio">
+        </p>
+        <p>checkbox
+            <input type="checkbox" name="checkbox">
+            <input type="checkbox" name="checkbox">
+            <input type="checkbox" name="checkbox">
+            <input type="checkbox" name="checkbox">
+        </p>
+        <p>file<input type="file" name="file"></p>
+        <p>submit<input type="submit" name="submit"></p>
+        <p>reset<input type="reset" name="reset"></p>
+    </form>
+    
+    </body>
+</html>
