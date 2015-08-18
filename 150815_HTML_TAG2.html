@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Document2</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+    <form action="TEST.html" method="post">
+       <fieldset>
+            <legend>SELECT TAG</legend>
+<!-- select tage -->
+        <select name="select">
+            <option value="" disabled> 말머리 선택 </option>
+            <option value="option1">option1</option>
+            <option value="option2" selected>option2</option>
+            <option value="option3">option3</option>
+        </select><input type="text" name="text" size="15">
+        <br><br>
+        <select name="sel-1" multiple size="5">
+                <option value="" disabled selected>Select1</option>
+                <option value="op1-1">op1-1</option>
+                <option value="op1-2">op1-2</option>
+        </select>
+        >
+        <select name="sel-2" multiple size="5">
+                <option value="" disabled selected>Select2</option>
+                <option value="op2-1">op2-1</option>
+                <option value="op2-2">op2-2</option>
+        </select>
+        <br><br>
+        <select name="select3">
+            <option value="" disabled selected> select-1 </option>
+            <optgroup label="category1">
+                <option value="op1">op1</option>
+                <option value="op2">op2</option>
+                <option value="op3">op3</option>
+                <option value="op4">op4</option>
+            </optgroup>
+            <optgroup label="category2">
+                <option value="ot1">ot1</option>
+                <option value="ot2">ot2</option>
+                <option value="ot3">ot3</option>
+                <option value="ot4">ot4</option>
+            </optgroup>
+        </select>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>TEXTAREA, NUMBER TAG</legend>
+<!-- textarea -->        
+        <p><label>기본 : <textarea cols="20" rows="2">내용을 미리 입력 가능. </textarea></label></p>
+        <p>disabled : <textarea cols="20" rows="2" disabled>내용을 미리 입력 가능. </textarea></p>
+        <p>readonly : <textarea cols="20" rows="2" readonly>내용을 미리 입력 가능. </textarea></p>
+            <p><label for="phd">placeholder : </label><textarea cols="20" rows="2" placeholder="내용을 입력해주세요" id="phd"></textarea></p>
+<!-- number, range -->
+       <input type="number" min="0" max="1000" step="100">
+       <input type="range" value="50" max="80" step="5">
+            <br>
+<!-- button -->
+       <button type="button">button</button>
+       <button type="submit">submit</button>
+       <button type="reset">reset</button>
+            
+        </fieldset>
+       <br><br>
+        
+<!--label / label for - id -->
+    <label>아이디 <input type="text"></label>
+    <label>패스워드 <input type="password"></label>
+        
+    </form>
+
+    <p>
+    <strong>제2차 세계 대전</strong>은 1943년에 접어들면서부터 점차 연합군측에 유리하게 되어, 그해 11월말에 미국·영국·중화민국 3국은 소위 <em>카이로 선언</em>을 발표했다. 이어 <span>1945년 5월</span>에 나치 독일이 항복하였고, <i>8월</i> <b>8일</b>에는 <u>미국</u>과 영국<sub>[0]</sub>, 소비에트<sup>[1]</sup> 연방이 모여 포츠담 선언을 발표했다.
+    </p>
+    
+    <div>2<sup>2</sup></div>
+    <div>H<sub>2</sub>O</div>
+    <div title="물">H<sub>2</sub>O</div>
+    
+    <br><br>
+    
+</body>
