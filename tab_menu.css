@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+
+/*  102c52   f1f2f4   숫자 666666  selected 숫자 fc554e  border:dedfe0 selected border : 0a1f3d
+    1880x102px  134x98px top border 4px  */ 
+
+
+.tab_menu {
+    width : 939px;
+    height : 50px;
+    background-color : #f1f2f4;
+    border : 1px #dedfe0 solid;
+    border-top : 2px solid #0a1f3d ;
+    border-left : none;
+    box-sizing : border-box;
+}
+
+.tab_menu:after {
+    clear : both;
+    display : block;
+    content : '';
+}
+
+ul {
+    list-style-type : none;
+    padding : 0px;
+    margin : 0px;
+}
+
+li {
+    float : left;
+}
+
+
+.end {
+    border-right : 1px #dedfe0 solid;
+}
+
+
+a { 
+    color : #000;
+    font-family : sans-serif;
+    font-size : 14px ;
+    font-weight : bold;
+    text-decoration : none;
+    display : block;
+    text-align : center ;
+    padding : 18px 0px 17px;
+    line-height : 13px;
+    width : 156px;
+    height : 48px;
+    border-left : 1px #dedfe0 solid;
+    border-bottom: 1px #dedfe0 solid;
+    box-sizing : border-box;
+}
+
+
+span {
+    color : #666666 ;
+    font-size : 12px ;
+    vertical-align : middle;
+}
+
+
+a:hover{
+    background-color : #102c52;
+    color : #fff;
+    border-color : #0a1f3d;
+}
+
+a:hover span{
+    color : #fc554e;
+}
+
+
+
