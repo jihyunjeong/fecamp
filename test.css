@@ -12,7 +12,7 @@ h1{
 
 .shopping_list {
     list-style-type: none;
-    margin : 0px;
+    margin : 5px;
     padding : 0px; 
     
 }
@@ -28,6 +28,8 @@ h1{
 .thumb {
     margin : 5px;
     background-image : url(img/logo.jpg);
+    background-position : 50% 50%;
+/*    background-repeat : no-repeat;*/
 /*    border : 1px solid #bbb;*/
     height :100px;
 }
