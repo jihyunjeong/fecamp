@@ -6,6 +6,17 @@ h1{
     font-family:sans-serif;
 }
 
+.box{
+    width : 320px;
+    height : 100px;
+    background-color : #eee;
+}
+
+.half{
+    width : 160px;
+    height : 100px;
+    background-color : #ddd;
+}
 
 .pc span {
     display: inline-block;
