@@ -7,12 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
     <link rel="stylesheet" href="icon.css">
 </head>
-<body>
-    <div class="box"></div>
-    <div class="half"></div>
+<body onclick="alert(document.body.clientWidth);">
+
+    <div class="box" onclick="alert(this.offsetWidth);"></div>
+    <div class="box half"></div>
     
     <br><br>
     
+    <div class="box"></div>
+    <div class="box half"></div>
+    
+    <br><br>
+    
+<!--
     <div class="pc">
         <h1>PC Weather</h1>
         <span class="weather1"></span>
@@ -46,6 +53,8 @@
         <span class="weather29"></span>
         <span class="weather30"></span>
     </div>
+-->
+<!--
     <div class="mobile">
         <h1>Mobile Weather</h1>        
         <span class="weather1"></span>
@@ -79,5 +88,6 @@
         <span class="weather29"></span>
         <span class="weather30"></span>
     </div>
+-->
 </body>
 </html>
