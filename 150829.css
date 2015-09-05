@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+/*브라우저 기본 스타일을 제거하기 위한 코드*/
+/* common css(reset css)*/
+
+body, h1 {
+    margin : 0px;
+}
+
+
+ul {
+    list-style-type : none;
+    padding-left : 0;
+    margin-top : 0;
+    margin-bottom : 0;
+}
+
+a { 
+    text-decoration : none;
+}
+
+
+
+/* gnb */
+
+.gnb_wrap {
+    background-color : #777;
+}
+
+
+.gnb {
+    max-width : 900px;
+    margin : 0 auto;
+}
+
+.gnb:after {
+    clear : both;
+    display : block;
+    content : '';
+
+}
+
+.gnb > li {   /*바로 밑에 있는 메뉴에만 적용하게!*/
+    float : left;
+    position : relative;  /* gnb_sub가 기준점을 잡을 수 있게 relative를 지정 */
+    width : 16.666%;
+}
+
+.gnb > li > a {
+    display : block;
+    padding : 10px 0;
+    border : 1px solid #ccc;
+    background-color : #777;
+    color : #fff ;
+    text-align : center;
+    line-height : 20px;
+}
+
+.gnb > li > a:hover {
+    background-color : #444;
+}
+
+.gnb > li:hover .gnb_sub{
+    display : block;
+    z-index : 10;
+}
+
+
+.gnb_sub {
+    display : none;
+    position :absolute;   /* absoulte로 지정되어야 독립된 layer로 된다. */
+    left : 0;
+    top : 100%;    /*위 li 대비 위치를 지정해준다.*/
+    width : 100%;
+
+}
+
+.gnb_sub li {
+    background-color : #fff;
+/*    border-top : 1px solid #aaa;*/
+}
+
+
+/*li와 li사이에 있는 ;  첫번째를 예외처리 */
+.gnb_sub li + li {     
+    border-top : 1px solid #aaa;
+}
+
+.gnb_sub li a {
+    display : block;
+    padding : 5px;
+    text-align : center;
+    background-color : #ddd;
+    color : #999;
+}
+
+
+.gnb_sub li a:hover {
+    color : #222;
+}
+
+
+
+
+
+/* layout */
+
+.wrap {
+    margin : 0 auto;
+}
+
+
+header {
+    background-color : #fff;
+/*    position : fixed;*/
+/*    right : 0;*/
+/*    left : 0;*/
+}
+
+header h1 {
+    text-align : center;
+    line-height : 80px;
+}
+
+footer {
+    width : 900px;
+    height : 30px;
+    margin : 0 auto;
+    background-color : #888;
+/*    border : 1px solid #000;*/
+}
+
+.container{
+/*    padding-top : 122px;*/
+    overflow : hidden;  /* float 종료가능 */
+}
+
+.container nav{
+    width : 200px;
+    float : left;
+}
+
+
+    
+
+.category{
+    display : none;
+    background-color : #fff;
+    border : 2px solid #008cff;
+}
+
+.category li a{
+    display : block;
+    padding : 6px 0 5px 40px;
+    
+    background-image:url(img/coopang.png);
+    background-repeat : no-repeat;
+    background-position : 10px -24px;
+    
+    color : #333;
+    font-size : 12px;
+    font-family : dotum,'돋움', sans-serif;
+    line-height : 18px;
+}
+
+
+.category li a:hover{
+    color : #008cff;
+    font-weight : bold;
+    background-position : 10px -414px;
+/*    transition-duration : 0.1s;*/
+}
+
+
+.category li a.item1 {
+    background-position : 10px -24px;
+}
+.category li a.item1:hover {
+    background-position : 12px -414px;
+}
+
+.category li a.item2 {
+    background-position : 10px -54px;
+}
+.category li a.item2:hover {
+    background-position : 12px -444px;
+}
+
+.category li a.item3 {
+    background-position : 10px -84px;
+}
+.category li a.item3:hover {
+    background-position : 12px -474px;
+}
+
+
+
+.category li:hover{
+    background-color : #dedede;
+}
+
+.container aside{
+    display : none;
+    width : 100px;
+    float : right;
+    background-color : #345;
+    color : #fff;
+    line-height : 60px;
+}
+    
+.container div.content {
+    max-width : 900px;
+    margin:0 auto;
+/*    padding : 10px;*/
+    overflow : hidden;
+    background-color: #eee;
+/*    line-height : 60px;    */
+
+}
+
+
+.ellipsis{
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow:ellipsis;
+}
+
+
+.spot{
+    height : 250px;
+/*    background-color:#adadad;*/
+    background-image:url(img/big.jpeg);
+    background-repeat:no-repeat;
+/*    background-repeat:repeat-x;*/
+    background-position : 50% 50%;
+/*    background-attachment : fixed;*/
+/*    background-size : contain;*/
+/*    background-size : auto auto;*/
+}
+
+
+
+
+
+
+/* 상품 목록 */
+
+
+
+.shopping_list {
+    margin : 0 -10px;
+    overflow : hidden;
+    padding : 5px;
+
+}
+
+.shopping_item {
+/*
+    width : 20%;
+    float : left;
+*/
+/*    padding : 5px;*/
+/*    box-sizing : border-box;  */
+}
+
+.shopping_item .box {
+    padding : 5px;
+}
+
+.thumb {
+    height :200px;
+    background-image : url(img/logo.jpg);
+    background-position : 50% 50%;
+    background-size : cover;
+    border : 1px solid #bbb;
+}
+
+.ellipsis{
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow : ellipsis;
+}
+
+p {
+    margin : 10px;
+}
+
+
+
+@media screen and (min-width:600px) {
+    .shopping_item {
+        width : 50%;
+        float : left;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .shopping_item {
+        width : 33.3%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .shopping_item {
+        width : 25%;
+    }
+}
+    
+@media screen and (min-width:900px) {
+    .shopping_item {
+        width : 20%;
+    }
+}
+    
+@media screen and (orientation:landscape) {
+    .thumb{
+        height : 100px;
+    }
+}
+    
+    
+    
+@media screen and (max-width:600px) {
+    .gnb > li{
+        width : 33.33%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .gnb > li{
+        width : 50.0%;
+    }
+}
