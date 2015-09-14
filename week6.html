@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>week6</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <script>
+
+//        console.log("Q1");
+        var numbers=[100,200,300];
+        console.log(numbers);
+
+//        console.log("Q2");
+        var arr1=[1,2,3], arr2=["a","b","c"], nested=arr1.concat(arr2);
+        console.log(nested);
+
+//        console.log("Q3"); 
+        var 수강생 = new Object();
+        수강생.이름 = "정지현";
+        수강생.성별 = "여자";
+        수강생.개발자 = false;
+        console.log(수강생);
+        
+//        console.log("Q4"); 
+        function 원소(arr,a) {
+            return arr[a];}
+        var arr=[10,20,30];
+        console.log("원소(arr,0): " + 원소(arr,0));
+            
+//        console.log("Q5"); 
+        function 세제곱(num) {
+//            return num*num*num;}
+            return Math.pow(num,3);}
+        console.log("세제곱(3): " + 세제곱(3));
+        
+//        console.log("Q6");
+        function 날짜(date) {
+            return date.getFullYear()+'년 '+ (date.getMonth()+1)+'월 '
+                + date.getDate()+'일 (' + "일월화수목금토"[date.getDay()] + ')'
+        } 
+        var today = new Date();
+        console.log("날짜(today): " + 날짜(today));
+        
+//        console.log("Q6_es6");
+        function 날짜es6(date) {
+           return  `${date.getFullYear()}년 ${(date.getMonth()+1)}월 ${date.getDate()}일 (${"일월화수목금토"[date.getDay()]})`
+        }
+        var today = new Date();
+        console.log("날짜es6(today): " + 날짜es6(today));
+
+    </script>
+</body>
+</html>
+
+
