@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event_jQuery</title>
+    <meta charset="utf-8">
+	
+	<style>
+
+		#box{
+			position : absolute;
+			top : 10px;
+			left : 10px;
+			width : 100px;
+			height : 100px;
+			background-color: green;
+		}
+		
+		
+		button{
+			position: absolute;
+			left : 200px;
+			top : 200px;
+		}
+
+	</style>
+		
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js">  //jQuery를 불러옴 
+	</script>   
+	<script scr="http://code.jquery.com/color/jquery.color-2.1.2.js">
+	</script>
+	
+	<script> 
+		jQuery(function($){	
+//			$('#box').animate({left:'300px'}, function(){
+//			alert('도착');
+//			});
+
+//			function a0(){
+//			$('#box').animate({left:'300px'},a1);  // 뒷 함수를 불러옴
+//			}
+//			function a1(){
+//			$('#box').animate({top:'300px'},a2);	//이어가자
+//			}
+//			function a2(){
+//			$('#box').animate({left:'0px'},a3);
+//			}
+//			function a3(){
+//			$('#box').animate({top:'0px'},a0);	 //반복
+//			}
+//			a0();					//함수를 실행
+			
+
+			$('button').on('click',function(event){		//click하면 멈추게 하자
+				$('#box').stop();						//box를 stop하자
+			});
+			
+			
+			$('#box').on('mousedown',function(event){		// box에 mousedown일때 
+//				console.log(event);  
+				var top = parseInt($(this).css('top')), left = parseInt($(this).css('left'));	// 최초 위치를 css 값을 가져옴
+				var startX = event.pageX, startY = event.pageY;				//최초 클릭한 위치를 가져옴
+				var $box = $(this);											//box를 계속 찾을 수 없으므로 정의해주자
+				
+				event.preventDefault();				// 기본 동작을 제거해준다. mousedown의 기본동작은 글씨가 선택되므로..
+				
+//				console.log(top, left, event.pageX, event.pageY);		// 이벤트가 나타난 화면의 좌표
+																		
+				$(document).on('mousemove.drag',function(event){				//mousemove, mouseup은 문서 전체에서 잡아준다 ******
+					var dx = event.pageX - startX, dy = event.pageY - startY;	//이동한 양을 최초 클릭 위치에서 dx, dy값을 가져옴. 
+					var newTop = top + dy, newLeft = left + dx;		// mouse 커서가 이동한 만큼 css도 바꿔준다. 
+					$box.css({top:newTop, left:newLeft});		//이제 이동시켜 주자. css에 새로운 값을 가져온다. 
+				
+//					console.log(dx,dy);	// 마우스 이동량을 확인해보자. 
+//					console.log(event);	//event를 찍어서 찾아보자 
+				});
+				
+				$(document).on('mouseup.drag',function(event){  				//mousemove, mouseup은 문서 전체에서 잡아준다 ******
+//					$(this).off('mousemove').off('mouseup');
+					$(this).off('mousemove.drag mouseup.drag'); 	// 묶어서 끌 수 있다. name space로 한정해준다. 
+				});
+				
+			});
+			
+			
+			
+			
+		});
+    </script>
+
+	
+</head>
+
+
+<body>
+	<div id="box"></div>
+	<button>멈추어라</button>
+
+</body>
+</html>
+
+
